@@ -7,8 +7,8 @@
 <head>
 <title>mysite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite3/assets/css/board.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/mysite3/assets/js/jquery/jquery-1.9.0.js"></script>
+<link href="${pageContext.request.contextPath }/assets/css/board.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="${pageContext.request.contextPath }/assets/js/jquery/jquery-1.9.0.js"></script>
 <script>
 $(function(){
 	$( "#board form" ).submit( function(){
@@ -29,7 +29,7 @@ $(function(){
 		<c:import url="/WEB-INF/views/include/header.jsp"></c:import>
 		<div id="content">
 			<div id="board">
-				<form class="board-form" method="post" action="/mysite3/board/insert">
+				<form class="board-form" method="post" action="${pageContext.request.contextPath }/board/insert">
 					<input type="hidden" name="groupNo" value="${vo.groupNo }">
 					<input type="hidden" name="orderNo" value="${vo.orderNo }">
 					<input type="hidden" name="depth" value="${vo.depth }">
@@ -49,7 +49,7 @@ $(function(){
 						</tr>
 					</table>
 					<div class="bottom">
-						<a href="/mysite3/board">취소</a>
+						<a href="${pageContext.request.contextPath }/board">취소</a>
 						<input type="submit" value="등록">
 					</div>
 				</form>				

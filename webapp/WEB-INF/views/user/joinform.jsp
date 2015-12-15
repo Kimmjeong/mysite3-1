@@ -7,8 +7,8 @@
 <head>
 <title>mysite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite3/assets/css/user.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/mysite3/assets/js/jquery/jquery-1.9.0.js"></script>
+<link href="${pageContext.request.contextPath }/assets/css/user.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="${pageContext.request.contextPath }/assets/js/jquery/jquery-1.9.0.js"></script>
 <script>
 $(function(){
 	$( "#join-form" ).submit(function(){
@@ -54,7 +54,7 @@ $(function(){
 		}
 		//ajax 통신
 		$.ajax( {
-			url : "/mysite3/api/user/checkemail",
+			url : "${pageContext.request.contextPath }/api/user/checkemail",
 			type: "get",
 			dataType: "json",
 			data: "email=" + email,
@@ -90,14 +90,14 @@ $(function(){
 		<div id="content">
 			<div id="user">
 
-				<form id="join-form" name="joinForm" method="post" action="/mysite3/user/join">
+				<form id="join-form" name="joinForm" method="post" action="${pageContext.request.contextPath }/user/join">
 					
 					<label class="block-label" for="name">이름</label>
 					<input id="name" name="name" type="text" value="">
 
 					<label class="block-label" for="email">이메일</label>
 					<input id="email" name="email" type="text" value="">
-					<img id="image-checked" src="/mysite3/assets/images/checked.png" style="width:12px; display:none">
+					<img id="image-checked" src="${pageContext.request.contextPath }/assets/images/checked.png" style="width:12px; display:none">
 					<input id="btn-checkemail" type="button" value="id 중복체크">
 					
 					<label class="block-label">패스워드</label>

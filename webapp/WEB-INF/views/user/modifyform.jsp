@@ -7,8 +7,8 @@
 <head>
 <title>mysite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<link href="/mysite3/assets/css/user.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/mysite3/assets/js/jquery/jquery-1.9.0.js"></script>
+<link href="${pageContext.request.contextPath }/assets/css/user.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="${pageContext.request.contextPath }/assets/js/jquery/jquery-1.9.0.js"></script>
 <script>
 /*
 $(function(){
@@ -55,7 +55,7 @@ $(function(){
 		}
 		//ajax 통신
 		$.ajax( {
-			url : "/mysite3/api/member",
+			url : "${pageContext.request.contextPath }/api/member",
 			type: "get",
 			dataType: "json",
 			data: "a=checkemail&email=" + email,
@@ -92,7 +92,7 @@ $(function(){
 		<div id="content">
 			<div id="user">
 
-				<form id="join-form" name="joinForm" method="post" action="/mysite3/user/modify">
+				<form id="join-form" name="joinForm" method="post" action="${pageContext.request.contextPath }/user/modify">
 					
 					<label class="block-label" for="name">이름</label>
 					<input id="name" name="name" type="text" value="${vo.name }">
