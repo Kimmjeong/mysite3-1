@@ -15,7 +15,7 @@
 		<c:import url="/WEB-INF/views/include/header.jsp"></c:import>
 		<div id="content">
 			<div id="guestbook">
-				<form method="post" action="/guestbook/insert">
+				<form method="post" action="${pageContext.request.contextPath }/guestbook/insert">
 					<table>
 						<tr>
 							<td>이름</td>
@@ -30,7 +30,7 @@
 						</tr>
 						<tr>
 							<td colspan=4 align=right>
-								<input type="button" id="btn-add" VALUE=" 확인 ">
+								<input type="submit" id="btn-add" VALUE=" 확인 ">
 							</td>
 						</tr>
 					</table>
@@ -41,7 +41,7 @@
 							<tr>
 								<td>${vo.name }</td>
 								<td>${vo.regDate }</td>
-								<td><a href="/guestbook/deleteform/${vo.no }">삭제</a></td>
+								<td><a href="${pageContext.request.contextPath }/guestbook/deleteform/${vo.no }">삭제</a></td>
 							</tr>
 							<tr>
 								<td colspan=3>
@@ -59,15 +59,5 @@
 		<c:import url="/WEB-INF/views/include/navigation.jsp"></c:import>
 		<c:import url="/WEB-INF/views/include/footer.jsp"></c:import>
 	</div>
-	<div id="form-password" style="display:none">
-		<p>
-			작성시 비밀번호를 입력해 주세요.
-		</p>
-		<form>
-			<input type="hidden" name="no" id="delete-no"> 
-			<input type="password" name="password" id="delete-password">
-			<input type="button" value="삭제">
-		</form>
-	</div>	
 </body>
 </html>
