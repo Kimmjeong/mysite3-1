@@ -1,0 +1,16 @@
+12월 16일 수요일 수업 내용
+
+1. 게시판( 전체 코드 리뷰 )
+	
+   특히 강조!
+
+   - 인증 처리 (시연과 코드 리뷰)
+   - 새글 추가 SQL문
+   - 새글과 답글 SQL문( Dynamic 예제 )
+   - 검색 like 구문 MyBatis 치환 예제
+
+
+2. Message Converter
+
+
+3. logging  
